@@ -7,6 +7,7 @@ There are 2 docker files and one Yaml file.In a typical setup where you have a f
 Dockerfile: This file contains instructions to build a Docker image for your React frontend. It specifies the base image (usually a Node.js image), sets up the working directory, installs dependencies, copies the frontend code into the container, and builds the production-ready assets. 
 
 FROM node:16-alpine: Specifies the base image to use, which is Node.js version 16 on Alpine Linux. This provides the environment needed to run Node.js applications.
+
 WORKDIR /app: Sets the working directory inside the container to /app. This is where subsequent commands will be executed.
 COPY package*.json ./: Copies the package.json and package-lock.json files from the host into the container's working directory. These files contain information about the project's dependencies.
 RUN npm install: Installs the dependencies specified in the package.json file using npm (Node Package Manager).
